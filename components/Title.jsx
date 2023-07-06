@@ -1,9 +1,15 @@
-export default function Title() {
+export default function Title(props) {
 
-    return (
+    return props.small ? (
         <>
-            <h1>This is Major Tom to Ground Control</h1>
-            <h2>I'm stepping through the door</h2>
+            <p>{props.primary}</p>
+            <p>{props.secondary}</p>
+        </>
+    ) : (
+        <>
+            <h1>{props.primary}</h1>
+            <h2>{props.secondary}</h2>
         </>
     )
+
 }
