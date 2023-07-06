@@ -21,13 +21,19 @@ export default function list() {
 
     return (
         <div>
-            {createSpanArray(42)}
+            <div>
+                {createSpanArray(42)}
+            </div>
+
+            <div>
+                {createSpanArray()}
+            </div>
         </div>
     )
 
 }
 
-function createSpanArray(numOfSpans) {
+function createSpanArray(numOfSpans = 10) { //using default value 10
     var result = [];
     var i;
     for (i = 1; i <= numOfSpans; i++) {
