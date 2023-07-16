@@ -1,4 +1,5 @@
 import { useState } from "react"
+import CounterDisplay from "../../components/CounterDisplay"
 
 export default function counter() {
 
@@ -13,11 +14,19 @@ export default function counter() {
     }
 
     return (
-        <div>
+        <div style={{
+            display: "flex", 
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column"
+        }}>
             <h1>Contador</h1>
-            <div>Valor: {counter}</div>
-            <button onClick={decrementCounter}>-</button>
-            <button onClick={incrementCounter}>+</button>
+            <CounterDisplay counter={counter}/>
+            <div>
+                <button onClick={decrementCounter}>-</button>
+                <button onClick={incrementCounter}>+</button>
+
+            </div>
         </div>
     )
 }
