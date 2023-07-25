@@ -1,6 +1,6 @@
-export default function generateRandomNumbers(amount = 6, array = []) {
+export default function mega(amount = 6, array = []) {
     
-    console.log("amount" + amount);
+    // console.log("amount" + amount);
     
     if (amount < 6 || amount > 60) {
         throw "invalid number!"
@@ -12,9 +12,9 @@ export default function generateRandomNumbers(amount = 6, array = []) {
 
     const curRandom = Math.ceil(Math.random() * 60)
     if (!array.includes(curRandom)) {
-        return generateRandomNumbers([...array, curRandom])
+        return mega(amount, [...array, curRandom])
     } else {
-        return generateMegaSenaNumbers([...array])
+        return mega(amount, [...array])
     }
 
 }
